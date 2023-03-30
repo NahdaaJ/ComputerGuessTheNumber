@@ -10,6 +10,7 @@ def guessNum():
     goLow = 100
     goHigh = 1
     userFeedback = ''
+    countGuess = 0
 
     while userFeedback!= "Y":
         if goLow != goHigh:
@@ -24,7 +25,10 @@ def guessNum():
         elif userFeedback == "L":
             goLow = compGuess - 1
 
-    print(f'\nThe computer has guessed the number {compGuess} correctly!')
+        countGuess = countGuess + 1
+
+    print(f'\nThe computer has guessed the number {compGuess} correctly!'
+          f'\nIt took the computer {countGuess} guesses!')
 
 
 guessNum()
